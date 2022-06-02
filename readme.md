@@ -1,3 +1,24 @@
+# 本リポジトリの概要
+本リポジトリは以下リポジトリをベースとして作成している。  
+https://github.com/howdyai/botkit.git
+
+legacyブランチの以下バージョンで動作確認済み
+
+| Date       | コミットID                                     |
+|------------|--------------------------------------------|
+| 2020/12/02 | `8e91473651276f28bb72715295b19a3f07dc09da` |
+
+
+# 新規追加ファイル
+- [anonymous_bot.js](anonymous_bot.js)・・・実行中、ユーザは指定のチャンネルで匿名での投稿をすることができる
+  - 実行方法：`node anonymous_bot.js`
+  - 前提　　：
+    - コード本文にトークン、チャンネルIDの設定ができていること
+    - Slackアプリ側で`anonymous`をAppとして追加できていること
+  - 投稿方法：App->anonymousに対してメッセージを送信する
+  - 注意点　：直接対象のチャンネルに投稿しても匿名化されない
+
+
 # Botkit Legacy Version
 
 This is the maintenance branch for the legacy version of Botkit (< 0.7.4).
