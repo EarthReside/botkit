@@ -11,14 +11,15 @@ legacyブランチの以下バージョンで動作確認済み
 
 # 新規追加ファイル
 - [anonymous_bot.js](anonymous_bot.js)・・・実行中、ユーザは指定のチャンネルで匿名での投稿をすることができる
-  - 実行方法：`node anonymous_bot.js`
-  - 前提　　：
-    - コード本文に`トークン`、`チャンネルID`の設定ができていること
-    - Slackアプリ側で`anonymous`をAppとして追加できていること
+  - 前準備　　：
+    - （作成者側の動き）コード本文に`トークン`、`チャンネルID`の設定ができていること
+    - （作成者側の動き）Slackアプリ側で`anonymous`をAppとして追加できていること
       - 以下URLにアクセスし、作成する（このさい、Tokenを記録しておくこと）
         - https://my.slack.com/services/new/bot
       - 以下サイトの手順1～3あたりを参考
         - https://qiita.com/prime300th/items/a2fcdbccd42804153ff5
+    - （ユーザごとの動き）Appの追加でBotを追加する
+  - 実行方法：`node anonymous_bot.js`
   - 投稿方法：App->anonymousに対してメッセージを送信する
   - 注意点　：直接対象のチャンネルに投稿しても匿名化されない
 
